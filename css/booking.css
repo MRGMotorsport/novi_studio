@@ -1,0 +1,74 @@
+#booking-section {
+    /* Image Background! */
+    background-image: url('../media/background_2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 1000px) {
+    .booking-title {
+        font-size: 2.5rem;
+    }
+}
+
+.booking-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;  
+}
+
+.booking-button {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #EF7E30;
+    color: #faf5eff2;
+    border: 2px solid #975221;
+    border-radius: 10px 50px 10px 50px;
+    width: 100%;
+    flex-shrink: 1;
+
+    text-shadow:
+        1px 1px 2px rgba(0,0,0,0.2),
+        -1px -1px 2px rgba(255,255,255,0.6);
+
+    /* Animation Stuff */
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.booking-button:hover {
+    background: #ff700a;
+    border-color: #d62828;
+    border-radius: 50px 10px 50px 10px;
+    transform: translateY(-3px);
+}
+
+.button-image {
+    height: 24px;      /* adjust as needed */
+    width: auto;       /* keeps aspect ratio */
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 786px) {
+    .booking-buttons {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .booking-button {
+        width: 100%;
+    }
+}

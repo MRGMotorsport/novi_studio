@@ -1,0 +1,46 @@
+/* ===== Nav Section ===== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* pushes logo left + links right */
+    align-items: center;
+    background-color: rgb(231, 180, 212);
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.nav-logo {
+    height: 40px;        /* Adjust as needed */
+    width: auto;         /* Keeps aspect ratio */
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    display: block;      /* Removes inline spacing issues */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-item {
+    margin: 0;
+    color: #934915;
+}
+
+
+@media (max-width: 500px) {
+    .nav-logo {
+        height: 30px;
+        width: auto;
+    }
+}

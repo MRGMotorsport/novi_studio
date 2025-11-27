@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5a567;
+    font-family: 'KoniBlack';
+}
+
+h1 {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'KoniBlack';
+    src: url('../fonts/KoniBlack.woff2') format('woff2'),
+         url('../fonts/KoniBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ===== Content Section Cards ===== */
+
+.content-section {
+
+    /* Flex Setup */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin-top: 1rem;
+    padding: 1rem;
+    padding-bottom: 4rem;
+}
+
+.image-title-stack {
+    display: flex;                /* align items in a row */
+    align-items: center;          /* vertically center them */
+    gap: 0.5rem;  
+    padding-bottom: 1rem;                  /* space between text and image */
+}
+
+.image-title-stack img {
+    height: 2em;                  /* match the font size of the h1 */
+    width: auto;                  /* keep original aspect ratio */
+}
+
+.content-wrapper {
+
+    /* Layout */
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 800px;
+
+
+    border-radius: 16px ;
+    color: #e67246;
+    background-color: #FDDBAD;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    
+    /* Heading Adjustments */
+    h1 {
+        font-weight: 200;
+    }
+}
+
+.content-wrapper {
+    /* 3D inward effect */
+    box-shadow: 
+        inset 2px 2px 2px #f5a5678d,
+        inset -2px -2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+@media (max-width: 786px) {
+    .image-title-stack {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color: #fee3c2;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Ordering the section areas! */
+
+@media (max-width: 1000px) {
+
+    /* Booking section goes after services */
+    #services-area {
+        order: 2;
+    }
+
+    #about-area {
+        order: 1;
+    }
+
+    #booking-area {
+        order: 3;
+    }
+
+    #reviews-section {
+        order: 4;
+    }
+}

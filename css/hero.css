@@ -1,0 +1,348 @@
+/* ===== Hero Section ===== */
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* SVG container positioned like a background */
+.hero-bg {
+    position: absolute;
+    inset: 0;            /* stretch to all edges */
+    z-index: 0;
+}
+
+.hero-bg svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;   /* acts like background-size: cover */
+}
+
+/* Actual hero content above SVG */
+
+.content-and-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 650px;
+    align-items: center;
+}
+
+
+.hero-wrapper {
+    position: relative;
+    z-index: 1;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 1050px;
+    gap: 3rem;
+}
+
+
+.hero-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 221, 180, 0.95) 0%,
+        rgba(255, 230, 200, 0.95) 100%
+    );
+    border-radius: 10px 50px 10px 50px;
+    padding: 0rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+
+.hero-text {
+    text-align: center;
+    color: #EF7E30;
+    font-weight: 200;
+    font-size: 2.5rem;           /* big enough to stand out */
+    line-height: 1.2;            /* tighter line spacing for a bold look */
+    letter-spacing: 1px;         /* subtle spacing for elegance */
+    text-transform: uppercase;   /* optional, gives more authority */
+    text-shadow:
+        1px 1px 2px rgba(0,0,0,0.2),
+        -1px -1px 2px rgba(255,255,255,0.6);
+    
+    /* Style tweaks */
+    width: 100%;
+    background-color: #f4d4acf2;
+    padding-top: 1.4rem;
+    padding-bottom: 0.8rem;
+    border-radius: 50px 10px 50px 10px;
+    
+    /* 3D inward effect */
+    box-shadow: 
+        inset 2px 2px 2px rgba(163, 163, 163, 0.418),
+        inset -2px -2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== Button Stuff - not super proud of tidiness here but will eventually fix ===== */
+
+.button-wrapper {
+    display: flex;
+    flex-direction: row; /* stack if needed */
+    width: 100%; /* stretch across the parent */
+    max-width: 550px; /* match hero-content width */
+    gap: 0.8rem;
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 100%;
+    height: 45px;
+
+
+    font-weight: 200;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 3px solid;
+    cursor: pointer;
+}
+
+#book-btn {
+    background-color: #EF7E30;
+    color: #faf5eff2;
+}
+
+#about-btn {
+    background-color: #FD8679;
+    color: #faf5eff2;
+}
+
+.btn-primary {
+    background: #003049;
+    border-color: #002f4941;
+    border-radius: 50px 10px 50px 10px;
+    text-shadow:
+        1px 1px 2px rgba(0,0,0,0.2),
+        -1px -1px 2px rgba(255,255,255,0.6);
+}
+
+.btn-primary:hover {
+    background: #d62828;
+    border-color: #d62828;
+    border-radius: 10px 50px 10px 50px;
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+/* ===== Review section - needs adjustment ===== */
+
+.hero-reviews {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: #f4d4acf2;
+    border-radius: 10px 50px 10px 50px;
+
+    /* 3D inward effect */
+    box-shadow: 
+        inset 2px 2px 2px rgba(0, 0, 0, 0.2),
+        inset -2px -2px 2px rgba(114, 114, 114, 0.418);
+}
+
+/* Carousel container */
+.carousel-container {
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    padding: 0.2rem;
+    overflow: hidden;
+    min-height: 140px;
+}
+
+/* Individual review */
+.review {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically centers content */
+    align-items: center;     /* horizontally centers content */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+
+
+.review.active {
+    opacity: 1;
+}
+
+/* Review text styling */
+.review-text {
+    font-size: 1rem;
+    line-height: 1;
+    color: #b15e22;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+/* Quotation marks */
+.review-text::before,
+.review-text::after {
+    font-size: 1.5rem;
+    color: #EF7E30;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+.review-text::before {
+    content: "“";
+    margin-right: 0.15rem;
+}
+
+.review-text::after {
+    content: "”";
+    margin-left: 0.15rem;
+}
+
+/* Reviewer name */
+.review-author {
+    font-size: 1rem;
+    color: #b15e22;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Small icon */
+.flower-icon {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+/* Responsive scren width shit */
+
+
+@media (max-width: 1000px) {
+
+  .hero-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-content {
+    background: none;  /* remove gradient */
+    }
+
+
+  .hero-image {
+    max-width: 90%;
+  }
+
+  .hero-text,
+  .hero-reviews {
+    display: none;
+  }
+
+  .button-wrapper {
+    flex-direction: row;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    max-width: 95%;
+    gap: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .reviews-title {
+        font-size: 1.2rem;
+    }
+    .review-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hero-image-wrapper {
+        box-shadow: none;
+        padding-bottom: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        padding: 0;
+        max-width: 80%;
+    }
+
+    .button-wrapper {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .hero-button {
+        width: 100%;
+        height: 55px;
+        box-sizing: border-box;
+    }
+
+    .hero-bg {
+            transform: translateY(40%);
+    }
+
+}

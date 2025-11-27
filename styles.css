@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fee3c2;
+    font-family: 'KoniBlack';
+}
+
+@font-face {
+    font-family: 'KoniBlack';
+    src: url('fonts/KoniBlack.woff2') format('woff2'),
+         url('fonts/KoniBlack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* ===== Nav Section ===== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* pushes logo left + links right */
+    align-items: center;
+    background-color: rgb(231, 180, 212);
+    padding: 0;
+    margin: 0;
+    
+}
+
+.nav-logo {
+    margin-left: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+
+/* ===== Hero Section ===== */
+
+.hero-image-wrapper {
+    /* Image Background! */
+    background-image: url('media/background_1.png');
+    background-size: cover;       /* makes it fill the container */
+    background-position: center;  /* centers the image */
+    background-repeat: no-repeat; /* prevents tiling */
+
+    padding: 2rem;
+    padding-bottom: 6rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-wrapper {
+    margin: 0 auto;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+}
+
+.hero-image {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    flex: 1.3;
+}
+
+.button-stack {
+    /* Background Styling */
+    background-color: #ffddb4;
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Flex Setup */
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hero-text {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #e67246;
+    font-weight: 200;
+}
+
+.hero-button {
+    color: rgb(95, 2, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 300px;
+    height: 45px;
+    border-radius: 80px;
+}
+
+#book-btn {
+    background-color: #EF7E30;
+}
+
+#about-btn {
+    background-color: #FD8679;
+}
+
+@media (max-width: 900px) {
+
+  .hero-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-text {
+    display: none;
+  }
+
+  .button-stack {
+    flex-direction: row;
+    max-width: 70%;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+    .button-stack {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+}

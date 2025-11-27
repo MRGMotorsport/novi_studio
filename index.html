@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVI STUDIO BRISTOL</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Sheets -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-wrapper">
+        <img src="media/small_logo.svg" alt="Logo" class="nav-logo">
+        <div class="nav-links">
+            <p class="nav-item">About</p>
+            <p class="nav-item">Book</p>
+        </div>
+    </div>
+</nav>
+
+
+<section>
+    
+    <!-- Overall hero wrapper (terrible name that I will eventually change) -->
+    <div class="hero-image-wrapper">
+
+        <!-- Inline animated SVG background (close on vscode for viewability pls)-->
+        <div class="hero-bg">
+            <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <style>
+                    @keyframes wave1 {
+                        0%, 100% { d: path("M 1920 0 Q 1600 150 1280 220 T 640 300 T 0 350 L 0 0 Z"); }
+                        50% { d: path("M 1920 0 Q 1600 180 1280 250 T 640 280 T 0 320 L 0 0 Z"); }
+                    }
+                    @keyframes wave2 {
+                        0%, 100% { d: path("M 1920 50 Q 1600 250 1280 320 T 640 400 T 0 450 L 0 0 L 1920 0 Z"); }
+                        50% { d: path("M 1920 50 Q 1600 220 1280 290 T 640 420 T 0 480 L 0 0 L 1920 0 Z"); }
+                    }
+                    @keyframes wave3 {
+                        0%, 100% { d: path("M 1920 100 Q 1600 350 1280 420 T 640 500 T 0 550 L 0 0 L 1920 0 Z"); }
+                        50% { d: path("M 1920 100 Q 1600 320 1280 390 T 640 520 T 0 580 L 0 0 L 1920 0 Z"); }
+                    }
+                    @keyframes wave4 {
+                        0%, 100% { d: path("M 1920 150 Q 1600 450 1280 520 T 640 600 T 0 650 L 0 0 L 1920 0 Z"); }
+                        50% { d: path("M 1920 150 Q 1600 420 1280 490 T 640 620 T 0 680 L 0 0 L 1920 0 Z"); }
+                    }
+                    
+                    .wave1 { animation: wave1 8s ease-in-out infinite; }
+                    .wave2 { animation: wave2 7s ease-in-out infinite 0.5s; }
+                    .wave3 { animation: wave3 9s ease-in-out infinite 1s; }
+                    .wave4 { animation: wave4 8.5s ease-in-out infinite 1.5s; }
+                    </style>
+                </defs>
+                
+                <!-- Background -->
+                <rect width="1920" height="1080" fill="#fee3c2"/>
+                
+                <!-- Wave 4 - Deep orange (bottom layer) -->
+                <path class="wave4" fill="#f5a567" opacity="0.9"/>
+                
+                <!-- Wave 3 - Cream/beige -->
+                <path class="wave3" fill="#f5e6d3" opacity="0.85"/>
+                
+                <!-- Wave 2 - Pink -->
+                <path class="wave2" fill="#f4d4d8" opacity="0.8"/>
+                
+                <!-- Wave 1 - Light peach (top layer) -->
+                <path class="wave1" fill="#fee3c2" opacity="0.85"/>
+                </svg>
+        </div>
+
+        <!-- Wraps all content that sits on top of the animated svg -->
+        <div class="hero-wrapper">
+
+            <!-- Logo Image-->
+            <img class="hero-image" src="media/NOVI_LOGO.svg">
+
+            <!-- Wrapper for the content as well as the buttons -->
+            <div class="content-and-buttons-wrapper">
+            
+                <!-- Title Text -->
+                <h1 class="hero-text">ENHANCING YOUR<br>NATURAL BEAUTY</h1>
+
+                <!-- Content in coloured box at full width -->
+                <div class="hero-content">
+
+                    <!-- Reviews Section-->
+                    <div class="hero-reviews">
+                        <!--<h2 class="reviews-title">What Clients Say</h2>-->
+
+                        <div class="carousel-container">
+                            <div class="review active">
+                                <p class="review-text">Saffi used Hippo Web Services for her website and has this cool 70's bookshelf hero section!</p>
+                                <p class="review-author">
+                                    <svg class="flower-icon" viewBox="0 0 450 446" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M129.827 425.168C186.42 449.137 224.255 411.433 234.358 316.642C239.018 425.833 270.34 465.782 331.565 435.821C371.513 416.272 370.181 339.279 288.954 283.352C377.321 327.267 433.65 324.632 448.08 259.383C459.036 209.844 423.446 155.518 302.27 194.8C398.178 144.836 422.617 68.9638 363.524 31.679C312.69 -0.394794 256.33 29.0158 233.692 152.855C228.366 -24.9144 139.814 -8.26882 105.193 12.3707C58.5866 40.1547 41.9416 117.567 163.117 190.805C62.5803 136.21 -7.61255 180.818 0.661595 238.743C9.31701 299.331 51.9803 320.331 163.117 270.702C104.791 327.554 86.6444 406.879 129.827 425.168Z" fill="#F47C47"/><circle cx="226.368" cy="225.427" r="57.2589" fill="#F9A850"/><circle cx="226.369" cy="225.427" r="25.3005" fill="#F47D45"/></svg>
+                                    James
+                                </p>
+                            </div>
+                            
+                            <div class="review">
+                                <p class="review-text">Novi Studio is the best value beautician!</p>
+                                <p class="review-author">
+                                    <svg class="flower-icon" viewBox="0 0 450 446" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M129.827 425.168C186.42 449.137 224.255 411.433 234.358 316.642C239.018 425.833 270.34 465.782 331.565 435.821C371.513 416.272 370.181 339.279 288.954 283.352C377.321 327.267 433.65 324.632 448.08 259.383C459.036 209.844 423.446 155.518 302.27 194.8C398.178 144.836 422.617 68.9638 363.524 31.679C312.69 -0.394794 256.33 29.0158 233.692 152.855C228.366 -24.9144 139.814 -8.26882 105.193 12.3707C58.5866 40.1547 41.9416 117.567 163.117 190.805C62.5803 136.21 -7.61255 180.818 0.661595 238.743C9.31701 299.331 51.9803 320.331 163.117 270.702C104.791 327.554 86.6444 406.879 129.827 425.168Z" fill="#F47C47"/><circle cx="226.368" cy="225.427" r="57.2589" fill="#F9A850"/><circle cx="226.369" cy="225.427" r="25.3005" fill="#F47D45"/></svg>
+                                    Maddie
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Book and About buttons -->
+                <div class="button-wrapper">
+                    <a class="hero-button btn-primary" id="book-btn">BOOK NOW</a>
+                    <a class="hero-button btn-primary" id="about-btn">ABOUT</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="content-section">
+
+    <section id="booking-area">
+        <div class="content-wrapper" id="booking-section">
+            <h1 class="booking-title">BOOK NOW!</h1>
+            <div class="booking-buttons"  id="web-book">
+                <div class="booking-button">
+                    <img class="button-image" src="media/calendar_icon.svg">
+                    <a>Book Directly</a>
+                </div>
+                
+                <div class="booking-button" id="insta-book">
+                    <img class="button-image" src="media/instagram_logo.svg">
+                    <a>Book With Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about-area">
+        <div class="content-wrapper" id="about-section">
+            <div class="image-title-stack">
+                <h1 class="section-title">About Me</h1>
+                <img src="media/motif_1.png">
+            </div>
+            <div class="text-image-stack">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae nunc eget ligula tincidunt ullamcorper. Integer molestie, ligula sit amet sagittis sollicitudin, justo lorem interdum orci, sed semper lectus lorem at sapien. Donec sodales, ipsum id posuere porttitor, magna nisl consequat augue, non fermentum lorem mauris vitae nisl. Sed pharetra velit at augue commodo, vitae tincidunt lorem malesuada.
+                </p>
+                <img src="media/owner_image.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section id="services-area">
+        <div class="content-wrapper" id="services-section">
+            <div class="image-title-stack">
+                <h1 class="section-title">Services</h1>
+                <img src="media/motif_2.png">
+            </div>
+            <div class="text-image-stack">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae nunc eget ligula tincidunt ullamcorper. Integer molestie, ligula sit amet sagittis sollicitudin, justo lorem interdum orci, sed semper lectus lorem at sapien. Donec sodales, ipsum id posuere porttitor, magna nisl consequat augue, non fermentum lorem mauris vitae nisl. Sed pharetra velit at augue commodo, vitae tincidunt lorem malesuada.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Info Cards -->
+    <section class="services-section"  id="reviews-section"> <!-- stupid class name, sorry future me-->
+        <div class="services-wrapper fade-section">
+            <div class="image-title-stack">
+                <h1 class="section-title">Customer Reviews</h1>
+                <img src="media/motif_2.png" />
+            </div>
+
+            <div class="services-cards">
+                <div class="service-card">
+                    <h3>Person One</h3>
+                    <p>A pretty sweet review of your stuff.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Person Two</h3>
+                    <p>Another pretty sweet review of your stuff. This time with lots of text to test if this section copes!</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Person Three</h3>
+                    <p>A concise review saying you're damn good.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Person Four</h3>
+                    <p>Pretty chuffed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="footer-section">
+    <div class="footer-wrapper fade-section">
+        <h2 class="footer-title">Get In Touch</h2>
+        
+        <div class="footer-links">
+            <a href="tel:+1234567890" class="footer-link" aria-label="Phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Phone</span>
+            </a>
+
+            <a href="mailto:hello@example.com" class="footer-link" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email</span>
+            </a>
+
+            <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+                <span>TikTok</span>
+            </a>
+        </div>
+
+        <p class="footer-copyright">© NOVI STUDIO BRISTOL. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JS AREA -->
+
+<script src="index.js"></script>
+<script src="cards.js"></script>
+
+
+<script>
+    const reviews = document.querySelectorAll('.review');
+    let currentIndex = 0;
+
+    function showNextReview() {
+        reviews[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % reviews.length;
+        reviews[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextReview, 5000);
+</script>
+
+
+</body>

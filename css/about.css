@@ -1,0 +1,43 @@
+#about-section {
+    /* Image Background! */
+    background-image: url('../media/background_2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-image-stack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Text grows as needed */
+.text-image-stack p {
+    flex: 1 1 auto;
+    margin: 0;
+}
+
+/* Keep image sized relative but not huge */
+.text-image-stack img {
+    max-height: 200px;   /* controls the size */
+    width: auto;
+    border-radius: 20px;
+    border: 6px solid orange;
+    object-fit: cover;
+}
+
+/* Stack on smaller screens */
+@media (max-width: 800px) {
+    .text-image-stack {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .text-image-stack img {
+        max-height: 250px; /* still controlled */
+        width: 100%;
+        max-width: 450px;
+    }
+}
