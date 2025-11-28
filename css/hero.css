@@ -92,10 +92,11 @@
 
 
 .hero-text {
+    font-family: 'Lexend Zetta', sans-serif;
     text-align: center;
     color: #EF7E30;
-    font-weight: 200;
-    font-size: 2.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     line-height: 1.2;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -106,8 +107,8 @@
 
     width: 100%;
     background-color: #f4d4acf2;
-    padding-top: 1.4rem;
-    padding-bottom: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     border-radius: 50px 10px 50px 10px;
 
     box-shadow: 
@@ -129,7 +130,7 @@
 }
 
 .hero-button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lexend Zetta', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;

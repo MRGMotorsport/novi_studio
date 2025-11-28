@@ -77,5 +77,15 @@ nav {
     .nav-logo {
         height: 30px;
         width: auto;
+        margin: 0;
+    }
+
+    .nav-links {
+        margin-right: 0.5rem;
+    }
+
+    .nav-wrapper {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 }
