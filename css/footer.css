@@ -15,20 +15,25 @@
     padding: 2.5rem 2rem;
     border-radius: 16px;
     text-align: center;
-    
+
     /* 3D inward effect */
-    box-shadow: 
+    box-shadow:
         inset 2px 2px 2px #f5a5678d,
         inset -2px -2px 2px rgba(0, 0, 0, 0.2);
 
     opacity: 0;
     transform: translateY(30px);
+    -webkit-transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .footer-wrapper.visible {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
 }
 
 .footer-title {
@@ -47,6 +52,7 @@
     flex-wrap: wrap;
 }
 
+/* Prevents iOS from splitting into a 3 + 1 layout */
 .footer-link {
     display: flex;
     flex-direction: column;
@@ -58,14 +64,20 @@
     text-decoration: none;
     color: #b15a38;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    min-width: 80px;
-    
+    -webkit-transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    min-width: 110px; /* the key to lock 2x2 or 1x4 on iOS */
+
     box-shadow: inset 2px 2px 3px rgba(0,0,0,0.15),
                 inset -2px -2px 3px rgba(255,255,255,0.6);
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .footer-link:hover {
     transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
@@ -91,12 +103,12 @@
     .footer-links {
         gap: 1rem;
     }
-    
+
     .footer-link {
-        min-width: 70px;
+        min-width: 100px; /* still prevents 3+1 wrapping */
         padding: 0.8rem;
     }
-    
+
     .footer-link svg {
         width: 24px;
         height: 24px;
@@ -107,7 +119,7 @@
     .footer-wrapper {
         padding: 1.5rem;
     }
-    
+
     .footer-title {
         font-size: 1.6rem;
     }

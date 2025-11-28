@@ -4,39 +4,53 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    /* iOS fix for sticky sometimes needing bg + transform context */
+    -webkit-backdrop-filter: none;
 }
 
 .nav-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* pushes logo left + links right */
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(231, 180, 212);
     padding: 0;
     margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+
+    /* iOS flexbox stability */
+    -webkit-transform: translateZ(0);
 }
 
 .nav-logo {
-    height: 40px;        /* Adjust as needed */
-    width: auto;         /* Keeps aspect ratio */
+    height: 40px;
+    width: auto;
     margin-left: 0.5rem;
     padding: 0.5rem;
-    display: block;      /* Removes inline spacing issues */
+    display: block;
+
+    /* iOS image rendering fixes */
+    -webkit-user-drag: none;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .nav-links {
     display: flex;
     gap: 1rem;
     margin-right: 1rem;
+
+    /* iOS flex wrap bug prevention */
+    -webkit-flex-wrap: nowrap;
 }
 
 .nav-item {
     margin: 0;
     color: #934915;
-}
 
+    /* iOS tap delay fix */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 
 @media (max-width: 500px) {
     .nav-logo {

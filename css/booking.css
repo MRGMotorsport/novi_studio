@@ -1,3 +1,5 @@
+/* ====== BOOKING SECTION ====== */
+
 #booking-section {
     /* Image Background! */
     background-image: url('../media/background_2.png');
@@ -24,7 +26,18 @@
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
-    gap: 1rem;  
+
+    gap: 1rem;
+
+    /* iOS Safari fallback for gap */
+    --gap-fallback: 1rem;
+}
+
+.booking-buttons > * {
+    margin-left: var(--gap-fallback);
+}
+.booking-buttons > *:first-child {
+    margin-left: 0;
 }
 
 .booking-button {
@@ -46,6 +59,7 @@
 
     /* Animation Stuff */
     transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     cursor: pointer;
 }
 
@@ -54,11 +68,12 @@
     border-color: #d62828;
     border-radius: 50px 10px 50px 10px;
     transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
 }
 
 .button-image {
-    height: 24px;      /* adjust as needed */
-    width: auto;       /* keeps aspect ratio */
+    height: 24px;
+    width: auto;
     margin-right: 0.5rem;
 }
 
@@ -66,6 +81,14 @@
     .booking-buttons {
         flex-direction: column;
         width: 90%;
+    }
+
+    .booking-buttons > * {
+        margin-left: 0; /* reset fallback gap in column mode */
+        margin-top: var(--gap-fallback);
+    }
+    .booking-buttons > *:first-child {
+        margin-top: 0;
     }
 
     .booking-button {

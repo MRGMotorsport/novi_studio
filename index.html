@@ -8,6 +8,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+
     <!-- CSS Sheets -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/nav.css">
@@ -40,47 +43,53 @@
         <!-- Inline animated SVG background (close on vscode for viewability pls)-->
         <div class="hero-bg">
             <svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                    <style>
-                    @keyframes wave1 {
-                        0%, 100% { d: path("M 1920 0 Q 1600 150 1280 220 T 640 300 T 0 350 L 0 0 Z"); }
-                        50% { d: path("M 1920 0 Q 1600 180 1280 250 T 640 280 T 0 320 L 0 0 Z"); }
-                    }
-                    @keyframes wave2 {
-                        0%, 100% { d: path("M 1920 50 Q 1600 250 1280 320 T 640 400 T 0 450 L 0 0 L 1920 0 Z"); }
-                        50% { d: path("M 1920 50 Q 1600 220 1280 290 T 640 420 T 0 480 L 0 0 L 1920 0 Z"); }
-                    }
-                    @keyframes wave3 {
-                        0%, 100% { d: path("M 1920 100 Q 1600 350 1280 420 T 640 500 T 0 550 L 0 0 L 1920 0 Z"); }
-                        50% { d: path("M 1920 100 Q 1600 320 1280 390 T 640 520 T 0 580 L 0 0 L 1920 0 Z"); }
-                    }
-                    @keyframes wave4 {
-                        0%, 100% { d: path("M 1920 150 Q 1600 450 1280 520 T 640 600 T 0 650 L 0 0 L 1920 0 Z"); }
-                        50% { d: path("M 1920 150 Q 1600 420 1280 490 T 640 620 T 0 680 L 0 0 L 1920 0 Z"); }
-                    }
-                    
-                    .wave1 { animation: wave1 8s ease-in-out infinite; }
-                    .wave2 { animation: wave2 7s ease-in-out infinite 0.5s; }
-                    .wave3 { animation: wave3 9s ease-in-out infinite 1s; }
-                    .wave4 { animation: wave4 8.5s ease-in-out infinite 1.5s; }
-                    </style>
-                </defs>
-                
-                <!-- Background -->
                 <rect width="1920" height="1080" fill="#fee3c2"/>
                 
-                <!-- Wave 4 - Deep orange (bottom layer) -->
-                <path class="wave4" fill="#f5a567" opacity="0.9"/>
+                <!-- Wave 4 -->
+                <path fill="#f5a567" opacity="0.9" d="M 1920 150 Q 1600 450 1280 520 T 640 600 T 0 650 L 0 0 L 1920 0 Z">
+                    <animate attributeName="d" dur="8.5s" repeatCount="indefinite"
+                        values="
+                        M 1920 150 Q 1600 450 1280 520 T 640 600 T 0 650 L 0 0 L 1920 0 Z;
+                        M 1920 150 Q 1600 420 1280 490 T 640 620 T 0 680 L 0 0 L 1920 0 Z;
+                        M 1920 150 Q 1600 450 1280 520 T 640 600 T 0 650 L 0 0 L 1920 0 Z
+                        "
+                    />
+                </path>
                 
-                <!-- Wave 3 - Cream/beige -->
-                <path class="wave3" fill="#f5e6d3" opacity="0.85"/>
+                <!-- Wave 3 -->
+                <path fill="#f5e6d3" opacity="0.85" d="M 1920 100 Q 1600 350 1280 420 T 640 500 T 0 550 L 0 0 L 1920 0 Z">
+                    <animate attributeName="d" dur="9s" repeatCount="indefinite" begin="1s"
+                        values="
+                        M 1920 100 Q 1600 350 1280 420 T 640 500 T 0 550 L 0 0 L 1920 0 Z;
+                        M 1920 100 Q 1600 320 1280 390 T 640 520 T 0 580 L 0 0 L 1920 0 Z;
+                        M 1920 100 Q 1600 350 1280 420 T 640 500 T 0 550 L 0 0 L 1920 0 Z
+                        "
+                    />
+                </path>
                 
-                <!-- Wave 2 - Pink -->
-                <path class="wave2" fill="#f4d4d8" opacity="0.8"/>
+                <!-- Wave 2 -->
+                <path fill="#f4d4d8" opacity="0.8" d="M 1920 50 Q 1600 250 1280 320 T 640 400 T 0 450 L 0 0 L 1920 0 Z">
+                    <animate attributeName="d" dur="7s" repeatCount="indefinite" begin="0.5s"
+                        values="
+                        M 1920 50 Q 1600 250 1280 320 T 640 400 T 0 450 L 0 0 L 1920 0 Z;
+                        M 1920 50 Q 1600 220 1280 290 T 640 420 T 0 480 L 0 0 L 1920 0 Z;
+                        M 1920 50 Q 1600 250 1280 320 T 640 400 T 0 450 L 0 0 L 1920 0 Z
+                        "
+                    />
+                </path>
                 
-                <!-- Wave 1 - Light peach (top layer) -->
-                <path class="wave1" fill="#fee3c2" opacity="0.85"/>
-                </svg>
+                <!-- Wave 1 -->
+                <path fill="#fee3c2" opacity="0.85" d="M 1920 0 Q 1600 150 1280 220 T 640 300 T 0 350 L 0 0 Z">
+                    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+                        values="
+                        M 1920 0 Q 1600 150 1280 220 T 640 300 T 0 350 L 0 0 Z;
+                        M 1920 0 Q 1600 180 1280 250 T 640 280 T 0 320 L 0 0 Z;
+                        M 1920 0 Q 1600 150 1280 220 T 640 300 T 0 350 L 0 0 Z
+                        "
+                    />
+                </path>
+            </svg>
+
         </div>
 
         <!-- Wraps all content that sits on top of the animated svg -->

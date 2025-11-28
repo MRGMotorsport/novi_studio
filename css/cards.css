@@ -9,6 +9,12 @@
 }
 
 .services-wrapper {
+    /* Image Background! */
+    background-image: url('../media/background_5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     width: 100%;
     max-width: 800px;
     background-color: #FDDBAD;
@@ -16,8 +22,6 @@
     padding: 2rem;
     border-radius: 16px;
 
-
-    
     /* 3D inward effect */
     box-shadow: 
         inset 2px 2px 2px #f5a5678d,
@@ -25,12 +29,16 @@
 
     opacity: 0;
     transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
 }
 
 .services-wrapper.visible {
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
 }
 
 /* Title strip */
@@ -45,6 +53,9 @@
     display: grid;
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
+
+    /* iOS grid fix (prevents weird collapsing) */
+    width: 100%;
 }
 
 /* Individual card */
@@ -54,11 +65,15 @@
     border-radius: 12px;
     box-shadow: inset 2px 2px 3px rgba(0,0,0,0.15),
                 inset -2px -2px 3px rgba(255,255,255,0.6);
+
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .service-card:hover {
     transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 

@@ -20,8 +20,6 @@ h1 {
 /* ===== Content Section Cards ===== */
 
 .content-section {
-
-    /* Flex Setup */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -32,34 +30,33 @@ h1 {
 }
 
 .image-title-stack {
-    display: flex;                /* align items in a row */
-    align-items: center;          /* vertically center them */
-    gap: 0.5rem;  
-    padding-bottom: 1rem;                  /* space between text and image */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .image-title-stack img {
-    height: 2em;                  /* match the font size of the h1 */
-    width: auto;                  /* keep original aspect ratio */
+    height: 2em;
+    width: auto;
 }
 
 .content-wrapper {
-
-    /* Layout */
     margin: 0 auto;
     padding: 2rem;
     max-width: 800px;
 
-
-    border-radius: 16px ;
+    border-radius: 16px;
     color: #e67246;
     background-color: #FDDBAD;
 
-    /* Animation */
     opacity: 0;
+    -webkit-transform: translateY(30px);
     transform: translateY(30px);
+
+    -webkit-transition: opacity 0.8s ease-out, -webkit-transform 0.8s ease-out;
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    
+
     /* Heading Adjustments */
     h1 {
         font-weight: 200;
@@ -67,29 +64,24 @@ h1 {
 }
 
 .content-wrapper {
-    /* 3D inward effect */
-    box-shadow: 
+    box-shadow:
         inset 2px 2px 2px #f5a5678d,
         inset -2px -2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .content-wrapper.visible {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
 }
 
 .content-wrapper.visible {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
 }
 
-
-
-
-
-
-
-@media (max-width: 786px) {
+@media (max-width: 1000px) {
     .image-title-stack {
         justify-content: center;
     }
@@ -101,21 +93,9 @@ h1 {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Ordering the section areas! */
 
 @media (max-width: 1000px) {
-
-    /* Booking section goes after services */
     #services-area {
         order: 2;
     }
