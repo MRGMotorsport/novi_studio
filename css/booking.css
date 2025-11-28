@@ -19,6 +19,8 @@
 }
 
 .booking-buttons {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
     display: flex;
     flex-direction: row;
     width: 100%;
