@@ -13,7 +13,7 @@
     background-color: #FDDBAD;
     color: #e67246;
     padding: 2.5rem 2rem;
-    border-radius: 16px;
+    border-radius: 16px 16px 0px 0px;
     text-align: center;
 
     /* 3D inward effect */

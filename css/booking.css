@@ -37,7 +37,7 @@
     -ms-user-select: none;
 
     /* iOS Safari fallback for gap */
-    --gap-fallback: 1rem;
+    --gap-fallback: 0rem;
 }
 
 .booking-buttons > * {
@@ -59,6 +59,7 @@
     border-radius: 10px 50px 10px 50px;
     width: 100%;
     flex-shrink: 1;
+    margin: 0;
 
     text-shadow:
         1px 1px 2px rgba(0,0,0,0.2),
@@ -68,6 +69,9 @@
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     cursor: pointer;
+    
+    /* Remove link styling */
+    text-decoration: none;
 }
 
 .booking-button:hover {
@@ -76,6 +80,16 @@
     border-radius: 50px 10px 50px 10px;
     transform: translateY(-3px);
     -webkit-transform: translateY(-3px);
+}
+
+/* Remove any link-specific styling */
+a.booking-button,
+a.booking-button:link,
+a.booking-button:visited,
+a.booking-button:hover,
+a.booking-button:active {
+    color: #faf5eff2;
+    text-decoration: none;
 }
 
 .button-image {
