@@ -129,7 +129,7 @@
 }
 
 .hero-button {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,6 +145,12 @@
 
     border: 3px solid;
     cursor: pointer;
+
+    /* Prevent text selection */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 #book-btn {

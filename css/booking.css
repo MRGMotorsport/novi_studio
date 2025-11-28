@@ -19,7 +19,7 @@
 }
 
 .booking-buttons {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     display: flex;
     flex-direction: row;
@@ -28,8 +28,13 @@
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
-
     gap: 1rem;
+
+    /* Prevent text selection */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 
     /* iOS Safari fallback for gap */
     --gap-fallback: 1rem;
